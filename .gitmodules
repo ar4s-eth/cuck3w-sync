@@ -1,6 +1,9 @@
-[submodule "repos/UberGuidoZ_Flipper"]
-	path = repos/UberGuidoZ_Flipper
+[submodule "libs/UberGuidoZ_Flipper"]
+	path = libs/UberGuidoZ_Flipper
 	url = https://github.com/UberGuidoZ/Flipper.git
-[submodule "repos/UberGuidoZ_Flipper-IRDB"]
-	path = repos/UberGuidoZ_Flipper-IRDB
+[submodule "libs/UberGuidoZ_Flipper-IRDB"]
+	path = libs/UberGuidoZ_Flipper-IRDB
 	url = https://github.com/UberGuidoZ/Flipper-IRDB.git
+[submodule "fw/FlipperSetup"]
+	path = fw/FlipperSetup
+	url = https://github.com/FlipperSetup/FlipperSetup.git
