@@ -1,6 +1,7 @@
 MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 MAKEFILE_DIR := $(dir $(MAKEFILE_PATH))
-LIBS_DIR := $(MAKEFILE_DIR)/repos
+LIBS_DIR := $(MAKEFILE_DIR)/libs
+FW_DIR := $(MAKEFILE_DIR)/fw
 
 update-repos:
 	git submodule update --recursive --remote
@@ -16,6 +17,8 @@ sync:
 	rsync -ar --mkpath --exclude='*.md' "${LIBS_DIR}/UberGuidoZ_Flipper/BadUSB/" "${SYNC_DIR}/badusb"
 	rsync -ar --mkpath --exclude='*.md' "${LIBS_DIR}/UberGuidoZ_Flipper/picopass/" "${SYNC_DIR}/picopass"
 	rsync -ar --mkpath --exclude='*.md' ${LIBS_DIR}/UberGuidoZ_Flipper-IRDB/* "${SYNC_DIR}/infrared/"
+
+	rsync -ar --mkpath --exclude='*.md' "${FW_DIR}/FlipperSetup/" "${SYNC_DIR}/FlipperSetup"
 
 	rsync \
 		--archive \
